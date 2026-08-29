@@ -1,0 +1,307 @@
+/* Color Scheme via pinterest https://creativebooster.net/blogs/colors/green-color-palettes */
+
+
+:root{
+    --primary: #13341E;
+    --secondary: #4E7145;
+    --accent: #EB9C35;
+    --highlight: #C4501B;
+    --alert: #8A2B13;
+    --font: "century gothic", tahoma, "Segoe UI";
+    --size: 10px;
+}
+
+
+#lizLogo{
+    float: left;
+}
+
+
+#wrapper{
+    background-color: var(--primary);
+    background-size: cover;
+    background-position: center;
+    margin: 10px;
+    padding: 30px;
+    border: 5px outset;
+    box-shadow: 3px 3px 10px var(--alert);
+
+
+}
+
+
+.galleryExhibit{
+    text-align: center;
+    padding: 50px;
+    margin: 20px;
+}
+/*@keyframes picAnimation{
+    from{
+    box-shadow:
+            5px 0px 1px var(--highlight),
+            0px 5px 1px var(--highlight),
+            -5px 0px 1px var(--highlight),
+            0px -5px 1px var(--highlight);
+    }
+    to{
+    box-shadow:
+            5px 0px 1px var(--alert),
+            0px 5px 1px var(--alert),
+            -5px 0px 1px var(--alert),
+            0px -5px 1px var(--alert);
+    }
+}
+*/
+.galleryExhibit img{
+    border: solid 2px var(--accent);
+    box-shadow:
+    5px 0px 1px var(--highlight),
+    0px 5px 1px var(--highlight),
+    -5px 0px 1px var(--highlight),
+    0px -5px 1px var(--highlight);
+}
+.galleryExhibit .animatedPics:hover{
+    box-shadow:
+    10px 0px 3px var(--alert),
+    0px 10px 3px var(--alert),
+    -10px 0px 3px var(--alert),
+    0px -10px 3px var(--alert);
+}
+
+
+#contact a{
+    color: var(--accent);
+}
+
+
+nav {
+    height: 40px;
+    background-color: var(--primary);
+    color: ivory;
+    font-family: var(--font);
+    margin: 10px;
+}
+
+
+strong, em, cite{
+    color: var(--accent);
+        text-shadow:
+                -1px 0 black,
+                /* Shadow to the left */
+                0 1px black,
+                /* Shadow downwards */
+                1px 0 black,
+                /* Shadow to the right */
+                0 1px black;
+            /* Shadow upwards */
+}
+
+
+body {
+    background-color: var(--secondary);
+    color: ivory;
+    font-family: arial;
+}
+
+
+.hero {
+    background-image: url("heroImage.jpg");
+    width: cover;
+    height: 500px;
+    background-repeat: no-repeat;
+    padding: 5px;
+    background-position: center;
+}
+
+
+nav,
+nav ul,
+nav li {
+    margin: 0;
+    padding: 0;
+    color: var(--accent);
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: var(--font);
+}
+
+
+
+
+nav ul {
+    list-style: none;
+    margin: -5px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-basis: 1;
+}
+
+
+nav ul li {
+    flex: 1 1 20%;
+    font-size: 12px;
+}
+/* below is the line you see under the nav links. the border */
+nav ul a {
+    display: inline-block;
+    padding: 6px 22px;
+    color: var(--accent);
+    background-color: var(--secondary);
+    text-decoration: none;
+    border-bottom: 2px solid ivory;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    font-size: 16px;
+}
+
+
+nav ul ul {
+    position: relative;
+    left: -9999px;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--primary);
+}
+
+
+nav ul ul li {
+    flex: 1 1 100%;
+}
+
+
+nav ul li:hover ul {
+    left: 0;
+}
+
+
+nav ul li:hover a:hover {
+    background-color: var(--accent);
+    color: var(--primary);
+   
+}
+
+
+nav ul li:hover ul li a:hover {
+    color: #fff;
+    background-color: var(--alert);
+}
+
+
+p {
+    font-family: "Lucida Handwriting" , arial;
+    font-weight: lighter;
+    color: ivory;
+
+
+}
+
+
+header {
+    font-size: 20px;
+}
+
+
+footer {
+    font-size: 7px;
+    text-transform: uppercase;
+}
+
+
+h1 {
+    text-decoration: underline overline dotted;
+    font-family: var(--font);
+    color: var(--accent);
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow:
+                -1px 0 ivory,
+                /* Shadow to the left */
+                0 1px ivory,
+                /* Shadow downwards */
+                1px 0 ivory,
+                /* Shadow to the right */
+                0 -1px ivory;
+                /* Shadow upwards */
+
+
+}
+
+
+h2 {
+    color: var(--alert);
+    font-size: 24px;
+    font-family: var(--font);
+    text-shadow:
+            -1px 0 ivory, /* Shadow to the left */
+            0 1px ivory, /* Shadow downwards */
+            1px 0 ivory,  /* Shadow to the right */
+            0 -1px ivory; /* Shadow upwards */
+   
+}
+h3{
+    font-family: var(--font);
+    font-weight: lighter;
+    text-shadow: 2px 2px var(--secondary);
+    color: ivory;
+}
+
+
+table {
+    border: 2px;
+    font-family: var(--font);
+}
+
+
+th {
+    font-family: franklin gothic medium;
+    background-color: darkcyan;
+    color: ivory;
+}
+
+
+td {
+    background-color: lightyellow;
+    color: black;
+}
+
+
+.courselist {
+    flex-direction: column;
+    flex: 1;
+}
+
+
+#byGrade{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    padding: 20px;
+}
+
+
+#bySchoolYear{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    padding: 20px;
+}
+
+
+footer a{
+    color: var(--accent);
+}
+
+
+.course-container{
+    display: flex;
+    justify-content: right;
+    margin: 20px;
+    flex: 1;
+
+
+}
