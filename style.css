@@ -2,11 +2,11 @@
 
 
 :root{
-    --primary: #13341E;
-    --secondary: #4E7145;
-    --accent: #EB9C35;
-    --highlight: #C4501B;
-    --alert: #8A2B13;
+    --primary: #8C76BA;
+    --secondary: #CAA2EC;
+    --accent: #AAAAFE;
+    --highlight: #E5CDFF;
+    --alert: #8546BB;
     --font: "century gothic", tahoma, "Segoe UI";
     --size: 10px;
 }
