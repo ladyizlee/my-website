@@ -11,6 +11,7 @@
 
     --heading-font: 'Quicksand', sans-serif;
     --body-font: 'Nunito', sans-serif;
+    --font: 'Nunito', sans-serif;
     --size: 10px;
 }
 
@@ -95,7 +96,7 @@ strong, em, cite{
 body {
     background-color: var(--secondary);
     color: ivory;
-    font-family: var(--body-font;
+    font-family: var(--body-font);
 	font-weight: 400;
      line-height: 1.6;
 }
@@ -173,6 +174,13 @@ nav ul a {
     transition: all 0.2s ease;
 }
 
+nav ul ul {
+    position: relative;
+    left: -9999px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+}
 
 nav ul ul li {
     flex: 1 1 100%;
