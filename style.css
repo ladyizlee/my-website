@@ -8,7 +8,8 @@
     --accent: #AAAAFE;
     --highlight: #E5CDFF;
     --alert: #8546BB;
-    --font: 'Nunito', 'Quicksand', sans-serif, "century gothic", tahoma, arial, "Segoe UI";
+    --heading-font: 'Quicksand', sans-serif;
+    --body-font: 'Nunito', sans-serif;
     --size: 10px;
 }
 
@@ -101,7 +102,9 @@ strong, em, cite{
 body {
     background-color: var(--secondary);
     color: ivory;
-    font-family: arial;
+    font-family: var(--body-font;
+	font-weight: 400;
+     line-height: 1.6;
 }
 
 
@@ -144,26 +147,26 @@ nav ul li {
     flex: 1 1 20%;
     font-size: 12px;
 }
+
 /* below is the line you see under the nav links. the border */
+
 nav ul a {
     display: inline-block;
-    padding: 6px 22px;
+    padding: 8px 22px;
     color: var(--accent);
     background-color: var(--secondary);
     text-decoration: none;
+    
+    font-family: var(--heading-font);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    
     border-bottom: 2px solid ivory;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    font-size: 16px;
-}
-
-
-nav ul ul {
-    position: relative;
-    left: -9999px;
-    display: flex;
-    flex-direction: column;
-    background-color:var(--primary);
+    
+    transition: all 0.2s ease;
 }
 
 
@@ -191,8 +194,10 @@ nav ul li:hover ul li a:hover {
 
 
 p {
-    font-family: "Lucida Handwriting" , arial;
-    font-weight: lighter;
+    font-family: var(--body-font);
+    font-weight: 400;
+    font-size: 1.05rem;
+    line-height: 1.7;
     color: ivory;
 
 
@@ -211,40 +216,32 @@ footer {
 
 
 h1 {
-    text-decoration: underline overline dotted;
-    font-family: var(--font);
+    font-family: var(--heading-font);
+    font-size:2.8rem;
     color: var(--accent);
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
+    margin: 30px 0 20px;
     text-shadow:
-                -1px 0 ivory,
-                /* Shadow to the left */
-                0 1px ivory,
-                /* Shadow downwards */
-                1px 0 ivory,
-                /* Shadow to the right */
-                0 -1px ivory;
-                /* Shadow upwards */
-
-
+        2px 2px 0 var(--secondary),
+        -1px -1px 0 ivory;
 }
 
 
 h2 {
-    color: var(--alert);
-    font-size: 24px;
-    font-family: var(--font);
+    color: var(--highlight);
+    font-size: 1.8rem;
+    font-family: var(--heading-font);
+    margin-top: 30px;
+    font-weight: 700;
     text-shadow:
-            -1px 0 ivory, /* Shadow to the left */
-            0 1px ivory, /* Shadow downwards */
-            1px 0 ivory,  /* Shadow to the right */
-            0 -1px ivory; /* Shadow upwards */
+     2px 2px 0 var(--secondary);
    
 }
 h3{
-    font-family: var(--font);
-    font-weight: lighter;
-    text-shadow: 2px 2px var(--secondary);
+    font-family: var(--heading-font);
+    font-size: 1.3rem;
+    font-weight: 600;
     color: ivory;
 }
 
