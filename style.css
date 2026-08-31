@@ -8,6 +8,7 @@
     --accent: #AAAAFE;
     --highlight: #E5CDFF;
     --alert: #8546BB;
+
     --heading-font: 'Quicksand', sans-serif;
     --body-font: 'Nunito', sans-serif;
     --size: 10px;
@@ -76,14 +77,6 @@
 }
 
 
-nav {
-    height: 40px;
-    background-color: var(--primary);
-    color: ivory;
-    font-family: var(--font);
-    margin: 10px;
-}
-
 
 strong, em, cite{
     color: var(--accent);
@@ -118,79 +111,72 @@ body {
 }
 
 
-nav,
-nav ul,
-nav li {
-    margin: 0;
-    padding: 0;
-    color: var(--accent);
-    font-weight: lighter;
-    text-transform: uppercase;
-    font-size: 30px;
-    font-family: var(--font);
+
+nav {
+    height: 40px;
+    margin: 10px;
+    background-color: var(--primary);
+    font-family: var(--heading-font);
 }
-
-
-
 
 nav ul {
     list-style: none;
     margin: -5px auto;
+    padding: 0;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    flex-basis: 1;
 }
-
 
 nav ul li {
     flex: 1 1 20%;
     font-size: 12px;
 }
 
-/* below is the line you see under the nav links. the border */
-
 nav ul a {
-    display: inline-block;
+    display: block;
     padding: 8px 22px;
     color: var(--accent);
     background-color: var(--secondary);
     text-decoration: none;
-    
-    font-family: var(--heading-font);
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    
     border-bottom: 2px solid ivory;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+
+    font-family: var(--heading-font);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
     
     transition: all 0.2s ease;
 }
 
+nav ul ul {
+    position: relative;
+    left: -9999px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+}
 
 nav ul ul li {
     flex: 1 1 100%;
 }
 
-
 nav ul li:hover ul {
     left: 0;
 }
 
-
 nav ul li:hover a:hover {
     background-color: var(--accent);
     color: var(--primary);
-   
 }
-
 
 nav ul li:hover ul li a:hover {
     color: #fff;
     background-color: var(--alert);
 }
+
 
 
 p {
