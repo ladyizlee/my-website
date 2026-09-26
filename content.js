@@ -1,1 +1,0 @@
-<a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vSFUsAUere6Wgft2F3MqlYa2qsPW7ft2ahArgu9_0UjHPCt7M-b2-0zBHaQbBSOzXaUxsH1_RtQofu6/pubhtml" target="_blank">Our BTS DEEP DIVE Series</a>
