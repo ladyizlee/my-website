@@ -279,29 +279,8 @@ td {
 }
 
 
-.courselist {
-    flex-direction: column;
-    flex: 1;
-}
 
 
-#byGrade{
-    display: flex;
-    text-align: left;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    padding: 20px;
-}
-
-
-#bySchoolYear{
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    padding: 20px;
-}
 
 
 footer a{
