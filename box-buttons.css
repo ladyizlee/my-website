@@ -1,0 +1,185 @@
+/* =========================================================
+   LET'S BOX THAT: box buttons + cute extras
+   Load AFTER style.css so these rules win:
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="box-buttons.css">
+   ========================================================= */
+
+:root {
+  --box-lavender: #b4a7d6;   /* box lid */
+  --box-pink: #f4a6e8;       /* merch / special */
+  --box-ink: #4f2e80;        /* outline + shadow */
+  --box-text: #2b1650;       /* dark purple text, readable on lavender */
+  --box-tape: rgba(255, 242, 204, 0.85); /* packing-tape strip */
+}
+
+/* ---------- cute headings ---------- */
+/* Fuzzy Bubbles is loaded by the Google Fonts <link> in each page's <head>. */
+#wrapper h1,
+#wrapper h2,
+#wrapper h3 {
+  font-family: "Fuzzy Bubbles", "Comic Sans MS", "Chalkboard SE", cursive;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- the base box ---------- */
+.box-button {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-sizing: border-box;
+  min-width: 190px;
+  max-width: 100%;
+  padding: 24px 26px 16px;
+  background: var(--box-lavender);
+  color: var(--box-text);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.25;
+  text-align: center;
+  text-decoration: none;
+  border: 4px solid var(--box-ink);
+  border-radius: 4px;
+  box-shadow: 8px 8px 0 var(--box-ink);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+/* the little strip of packing tape across the top */
+.box-button::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  width: 46px;
+  height: 14px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: var(--box-tape);
+  border-left: 2px solid var(--box-ink);
+  border-right: 2px solid var(--box-ink);
+}
+
+/* small second line under the label */
+.box-button__sub {
+  font-size: 13px;
+  font-weight: normal;
+  opacity: 0.85;
+}
+
+/* press the box down toward its shadow */
+.box-button:hover,
+.box-button:focus-visible {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0 var(--box-ink);
+}
+
+.box-button:active {
+  transform: translate(8px, 8px);
+  box-shadow: 0 0 0 var(--box-ink);
+}
+
+.box-button:focus-visible {
+  outline: 3px solid var(--box-text);
+  outline-offset: 4px;
+}
+
+/* ---------- variants ---------- */
+.box-button--pink  { background: var(--box-pink); }
+
+.box-button--small {
+  min-width: 0;
+  padding: 18px 16px 10px;
+  font-size: 15px;
+  border-width: 3px;
+  box-shadow: 5px 5px 0 var(--box-ink);
+}
+.box-button--small::before { width: 32px; height: 11px; top: -3px; }
+.box-button--small:hover,
+.box-button--small:focus-visible { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--box-ink); }
+.box-button--small:active { transform: translate(5px, 5px); box-shadow: 0 0 0 var(--box-ink); }
+
+/* thumbnail card: picture on top, label underneath, like a product box */
+.box-button--card {
+  width: 240px;
+  padding: 22px 14px 14px;
+}
+.box-button--card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 3px solid var(--box-ink);
+  background: #e1bfff;
+}
+
+/* ---------- layout helpers ---------- */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 28px 26px;          /* room for the shadows */
+  margin: 22px 0 30px;
+  padding: 0 8px 8px 0;
+}
+
+/* nav: turn the old list into a row of small boxes */
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px 18px;
+  margin: 18px 0;
+  padding: 0;
+  list-style: none;
+}
+nav li { list-style: none; margin: 0; padding: 0; }
+
+footer { padding-top: 14px; }
+footer .box-button { margin: 6px 10px 10px 0; }
+
+/* ---------- logo banner + LYSM extras ---------- */
+.hero-banner {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 20px auto;
+  border: 4px solid var(--box-ink);
+  border-radius: 4px;
+  box-shadow: 8px 8px 0 var(--box-ink);
+}
+
+.signoff { text-align: center; margin: 30px 0 10px; }
+
+.lysm {
+  height: 70px;
+  width: auto;
+  transition: transform 0.15s ease;
+}
+.lysm:hover { transform: rotate(-6deg) scale(1.1); }
+
+/* LYSM stuck on the corner of a box */
+.lysm-sticker {
+  position: absolute;
+  top: -22px;
+  right: -16px;
+  width: 64px;
+  height: auto;
+  transform: rotate(10deg);
+}
+
+/* phones: let boxes fill the row */
+@media (max-width: 520px) {
+  .box-button,
+  .box-button--card { width: 100%; }
+  .box-button--small { width: auto; }
+}
+
+/* respect "reduce motion" settings */
+@media (prefers-reduced-motion: reduce) {
+  .box-button,
+  .lysm { transition: none; }
+}
