@@ -314,6 +314,10 @@ footer a{
     #bingoCard {
         gap: 3px;
     }
+    .bingoSquare {
+        font-size: clamp(0.45rem, 2.5vw, 0.75rem);
+        aspect-ratio: auto;
+    }
 }
 
 
