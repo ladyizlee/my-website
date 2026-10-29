@@ -15,12 +15,11 @@
 }
 
 /* ---------- cute headings ---------- */
-/* Fuzzy Bubbles is loaded by the Google Fonts <link> in each page's <head>. */
 #wrapper h1,
 #wrapper h2,
 #wrapper h3 {
-  font-family: "Caveat", "Gaegu", "Chalkboard SE", cursive;
-  font-weight: 700;
+  font-family: var(--heading-font);
+  font-weight: 400;
   letter-spacing: 0.01em;
 }
 
@@ -90,6 +89,7 @@
 
 /* ---------- variants ---------- */
 .box-button--pink  { background: var(--box-pink); }
+.box-button--aqua  { background: var(--box-aqua); }
 
 .box-button--small {
   min-width: 0;

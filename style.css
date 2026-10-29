@@ -1,5 +1,5 @@
 /* Color Scheme eyedropper tool picked from hero image */
-
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Fredoka:wght@400;600;700&family=Nunito:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Nunito:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap');
 
@@ -9,24 +9,19 @@
     --accent: #AAAAFE;
     --highlight: #E5CDFF;
     --alert: #8546BB;
-
-    --heading-font: "Fredoka", "Chalkboard SE", cursive, 'Quicksand', sans-serif;
-    --body-font: 'Nunito', sans-serif;
-    --font: 'Nunito', sans-serif;
+    --aqua: #7BFFE9;
+    --heading-font: "Chewy", "Chalkboard SE", "Tahoma", cursive;
+    --button-font: "Fredoka", "Quicksand", sans-serif;
+    --font: "Chewy", "Nunito", sans-serif;
+    --body-font: "Nunito", "Quicksand", sans-serif;
     --size: 10px;
 }
 
-
-h1, h2, h3 {
-  font-family: var(--heading-font), "Chalkboard SE", cursive;
-  font-weight: 700;
-}
 
 #lbtLogo{
     float: left;
     width: 200px;
 }
-
 
 #wrapper{
     background-color: var(--primary);
@@ -40,50 +35,15 @@ h1, h2, h3 {
 
 }
 
-
 .galleryExhibit{
     text-align: center;
     padding: 50px;
     margin: 20px;
 }
-/*@keyframes picAnimation{
-    from{
-    box-shadow:
-            5px 0px 1px var(--highlight),
-            0px 5px 1px var(--highlight),
-            -5px 0px 1px var(--highlight),
-            0px -5px 1px var(--highlight);
-    }
-    to{
-    box-shadow:
-            5px 0px 1px var(--alert),
-            0px 5px 1px var(--alert),
-            -5px 0px 1px var(--alert),
-            0px -5px 1px var(--alert);
-    }
-}
-
-.galleryExhibit img{
-    border: solid 2px var(--accent);
-    box-shadow:
-    5px 0px 1px var(--highlight),
-    0px 5px 1px var(--highlight),
-    -5px 0px 1px var(--highlight),
-    0px -5px 1px var(--highlight);
-}
-.galleryExhibit .animatedPics:hover{
-    box-shadow:
-    10px 0px 3px var(--alert),
-    0px 10px 3px var(--alert),
-    -10px 0px 3px var(--alert),
-    0px -10px 3px var(--alert);
-}
-*/
 
 #contact a{
     color: var(--accent);
 }
-
 
 
 strong, em, cite{
@@ -165,6 +125,7 @@ nav ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;       /* was nowrap, so it can wrap on small screens */
+
 }
 
 
@@ -185,12 +146,10 @@ nav ul a {
     color: var(--accent);
     background-color: var(--secondary);
     text-decoration: none;
-    
-    font-family: var(--heading-font);
+    font-family: var(--button-font);
     font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.5px;
-    
     border-bottom: 2px solid ivory;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -237,7 +196,6 @@ nav ul li:hover ul li a:hover {
 }
 
 
-
 p {
     font-family: var(--body-font);
     font-weight: 400;
@@ -260,7 +218,6 @@ footer {
 }
 
 
-
 table {
     border: 2px;
     font-family: var(--font);
@@ -280,20 +237,8 @@ td {
 }
 
 
-
-
 footer a{
     color: var(--accent);
-}
-
-
-.course-container{
-    display: flex;
-    justify-content: right;
-    margin: 20px;
-    flex: 1;
-
-
 }
 
 
@@ -392,6 +337,7 @@ footer a{
     text-align: center;
     color: var(--highlight);
     font-size: clamp(1.6rem, 5vw, 2.8rem);
+    font-family: var(--heading-font);
     letter-spacing: 1px;
     text-shadow: 3px 3px 0 var(--alert);
 }
@@ -409,12 +355,14 @@ footer a{
     border: 4px dashed var(--primary);
     border-radius: 28px;
     box-shadow: 6px 6px 0 var(--alert);
+    font-family: var(--font);
 }
 
 .welcome-message h2 {
     margin: 0;
-    font-size: clamp(1.2rem, 3.5vw, 1.9rem);
     line-height: 1.5;
+    font-size: clamp(1.1rem, 3vw, 1.6rem);
+    font-family: var(--font);
 }
 
 .signoff {
@@ -430,4 +378,20 @@ footer a{
     border: 2px dashed var(--accent);
     border-radius: 20px;
     overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.4;
+}
+#Youtube h3,
+#Patreon h3,
+#socials h3,
+#wrapper h2,
+#wrapper h3 {
+  font-family: var(--heading-font);
+  font-weight: 400;
+  text-transform: none;
 }
