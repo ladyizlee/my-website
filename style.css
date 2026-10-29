@@ -110,13 +110,26 @@ body {
 
 
 .hero {
-    background-image: url("heroImage.jpg");
-    width: cover;
-    height: 500px;
-    background-repeat: no-repeat;
-    padding: 5px;
+    clear: both;
+    background-image: url("images/heroImage.jpg");
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    width: min(100%, 900px);
+    height: clamp(220px, 45vw, 500px);
+    margin: 28px auto;
+    border: 6px solid ivory;
+    border-radius: 32px;
+    box-shadow:
+        0 0 0 6px var(--accent),
+        10px 10px 0 6px var(--alert),
+        0 14px 30px rgba(0, 0, 0, 0.4);
+    transform: rotate(-1deg);
+    transition: transform 0.25s ease;
+}
 
+.hero:hover {
+    transform: rotate(0deg) scale(1.01);
 }
 
 
@@ -311,13 +324,17 @@ footer a{
 
 #bingoCard {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 6px;
-    max-width: 700px;
+    width: min(100%, 700px);
     margin: 20px auto;
 }
 
 .bingoSquare {
+    min-width: 0;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    hyphens: auto;
     background-color: var(--secondary);
     color: ivory;
     border: 2px solid var(--accent);
@@ -327,10 +344,10 @@ footer a{
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 8px;
-    font-size: 3rem;
+    padding: 4px;
+    font-size: clamp(0.55rem, 1.8vw, 0.85rem);
     font-family: var(--body-font);
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
 .freeSpace {
@@ -344,7 +361,7 @@ footer a{
 /* Smaller screens: shrink text a bit so squares don't overflow */
 @media (max-width: 600px) {
     .bingoSquare {
-        font-size: 1.5rem;
+        font-size: 0.75rem;
         padding: 4px;
     }
 }
@@ -369,4 +386,48 @@ footer a{
 .box-button:hover {
   transform: translate(4px, 4px);
   box-shadow: 4px 4px 0 #4f2e80;
+}
+
+#header h1 {
+    text-align: center;
+    color: var(--highlight);
+    font-size: clamp(1.6rem, 5vw, 2.8rem);
+    letter-spacing: 1px;
+    text-shadow: 3px 3px 0 var(--alert);
+}
+
+#header h1::before { content: "✨ "; }
+#header h1::after  { content: " ✨"; }
+
+.welcome-message {
+    text-align: center;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 24px 30px;
+    background-color: var(--highlight);
+    color: var(--secondary);
+    border: 4px dashed var(--primary);
+    border-radius: 28px;
+    box-shadow: 6px 6px 0 var(--alert);
+}
+
+.welcome-message h2 {
+    margin: 0;
+    font-size: clamp(1.2rem, 3.5vw, 1.9rem);
+    line-height: 1.5;
+}
+
+.signoff {
+    text-align: center;
+}
+
+.ad-slot {
+    max-width: 728px;
+    margin: 30px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(229, 205, 255, 0.15);
+    border: 2px dashed var(--accent);
+    border-radius: 20px;
+    overflow: hidden;
 }
