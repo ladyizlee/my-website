@@ -306,9 +306,21 @@ footer a{
 
 /* Smaller screens: shrink text a bit so squares don't overflow */
 @media (max-width: 600px) {
+    #wrapper {
+        padding: 12px;   /* gives the board more room on phones */
+    }
+
+    #bingoCard {
+        gap: 3px;
+    }
+
     .bingoSquare {
-        font-size: 0.75rem;
-        padding: 4px;
+        aspect-ratio: auto;   /* squares can grow taller instead of clipping text */
+        min-height: 62px;
+        overflow: visible;
+        font-size: 0.62rem;
+        padding: 3px;
+        overflow-wrap: break-word;
     }
 }
 
