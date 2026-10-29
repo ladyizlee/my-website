@@ -75,8 +75,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: min(100%, 900px);
-    height: clamp(220px, 45vw, 500px);
+    width: min(100%, 1400px);
+    height: auto;
+    aspect-ratio: 6 / 1;   /* CHANGE THIS to your image's width / height */
     margin: 28px auto;
     border: 6px solid ivory;
     border-radius: 32px;
