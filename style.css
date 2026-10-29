@@ -61,7 +61,7 @@ h1, h2, h3 {
             0px -5px 1px var(--alert);
     }
 }
-*/
+
 .galleryExhibit img{
     border: solid 2px var(--accent);
     box-shadow:
@@ -77,7 +77,7 @@ h1, h2, h3 {
     -10px 0px 3px var(--alert),
     0px -10px 3px var(--alert);
 }
-
+*/
 
 #contact a{
     color: var(--accent);
@@ -157,13 +157,17 @@ nav ul {
 nav ul li {
     flex: 1 1 20%;
     font-size: 12px;
+    position: relative;
 }
 
 /* below is the line you see under the nav links. the border */
 
 nav ul a {
-    display: inline-block;
+    display: block;
+    box-sizing: border-box;
     padding: 8px 22px;
+    text-align: center;
+    white-space: nowrap;
     color: var(--accent);
     background-color: var(--secondary);
     text-decoration: none;
