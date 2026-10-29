@@ -60,8 +60,11 @@ const bingoSquares = [
 "Liz reminds you to get a blankey",
 "Pause for Zelda break, chat gets tea",
 "Liz complains about the length of the behind/extras",
-"Impromptu therapy session"
-
+"Impromptu therapy session",
+"Liz says HELLO OLIVER when Ollie appears",
+"JACKSON CELEB APPEARANCE",
+"Kelly tries to get mic to hear Ollie's grumbles",
+"mods spam 'AD' to get Liz to notice",
 ];
 
 

@@ -8,6 +8,7 @@
 :root {
   --box-lavender: #b4a7d6;   /* box lid */
   --box-pink: #f4a6e8;       /* merch / special */
+  --box-aqua: #7BFFE9;        /* important links / special */
   --box-ink: #4f2e80;        /* outline + shadow */
   --box-text: #2b1650;       /* dark purple text, readable on lavender */
   --box-tape: rgba(255, 242, 204, 0.85); /* packing-tape strip */
@@ -18,7 +19,7 @@
 #wrapper h1,
 #wrapper h2,
 #wrapper h3 {
-  font-family: "Fuzzy Bubbles", "Comic Sans MS", "Chalkboard SE", cursive;
+  font-family: "Playpen Sans", "Comic Sans MS", "Chalkboard SE", cursive;
   font-weight: 700;
   letter-spacing: 0.01em;
 }

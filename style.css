@@ -9,7 +9,7 @@
     --highlight: #E5CDFF;
     --alert: #8546BB;
 
-    --heading-font: "Fuzzy Bubbles", "Chalkboard SE", cursive, 'Quicksand', sans-serif;
+    --heading-font: "Fredoka", "Chalkboard SE", cursive, 'Quicksand', sans-serif;
     --body-font: 'Nunito', sans-serif;
     --font: 'Nunito', sans-serif;
     --size: 10px;
@@ -17,7 +17,7 @@
 
 
 h1, h2, h3 {
-  font-family: "Fuzzy Bubbles", "Chalkboard SE", cursive;
+  font-family: var(--heading-font), "Chalkboard SE", cursive;
   font-weight: 700;
 }
 
@@ -115,12 +115,13 @@ body {
     background-repeat: no-repeat;
     padding: 5px;
     background-position: center;
+
 }
 
 
 
 nav {
-    height: 40px;
+    min-height: 40px;   
     background-color: var(--primary);
     color: ivory;
     font-family: var(--font);
@@ -146,11 +147,10 @@ nav li {
 
 nav ul {
     list-style: none;
-    margin: -5px auto;
+    margin: 0;             /* was -5px auto */
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    flex-basis: 1;
+    flex-wrap: wrap;       /* was nowrap, so it can wrap on small screens */
 }
 
 
@@ -185,11 +185,19 @@ nav ul a {
 }
 
 nav ul ul {
-    position: relative;
+    position: absolute;    /* was relative */
+    top: 100%;
     left: -9999px;
+    z-index: 100;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: var(--primary);
+}
+
+nav ul li:hover ul,
+nav ul li:focus-within ul {
+    left: 0;
 }
 
 nav ul ul li {
