@@ -429,7 +429,7 @@ h1, h2, h3, h4, h5, h6, th {
   text-transform: none;
 }
 
-
+/* ADDED TO  ABOUT ME SECTION */
 .about-me {
     max-width: 760px;
     margin: 30px auto;
@@ -486,6 +486,33 @@ h1, h2, h3, h4, h5, h6, th {
     font-size: 1.4rem;
     color: var(--accent);
 }
+.about-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.about-gallery img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border: 4px solid ivory;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 var(--alert);
+    transition: transform 0.2s ease;
+}
+
+.about-gallery img:nth-child(odd)  { transform: rotate(-2deg); }
+.about-gallery img:nth-child(even) { transform: rotate(2deg); }
+
+.about-gallery img:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* BINGO WINNERS SECTION */
 
 .hall-of-fame {
     max-width: 720px;
