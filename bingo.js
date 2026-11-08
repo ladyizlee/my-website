@@ -38,11 +38,11 @@ const bingoSquares = [
 "Liz gets up and paces the room",
 "Liz telling Kelly to watch the screen",
 "Stalling by looking at chat",
-// "Both girls off screen and zelda is the star of the show",
+"Both girls off screen and zelda is the star of the show",
 "Both girls off screen",
 "Technology issues",
-// "Zelda digging in bed",
-// "Zelda getting mildly startled by the chaos",
+"Zelda digging in bed",
+"Zelda getting mildly startled by the chaos",
 "Liz spilling/ spitting out a drink",
 "Full body nodding",
 "Dominos On The Porch reference",
@@ -59,7 +59,7 @@ const bingoSquares = [
 "Mods have to yell LIZ KELLY to get your attention",
 "Someone makes up a new unit of time",
 "Liz reminds you to get a blankey",
-// "Pause for Zelda break, chat gets tea",
+"Pause for Zelda break, chat gets tea",
 "Liz complains about the length of the behind/extras",
 "Impromptu therapy session",
 "Liz says HELLO OLIVER when Ollie appears",
@@ -71,9 +71,10 @@ const bingoSquares = [
  "Perfect pause from Liz",
  "“Chills on my face”",
  "Bone Chills x3",
- "Liz sing/says SPOOKY SATURDAY",
- "Liz and Kelly play halloween music",
- "Kelly talks about her decorations"
+//  "Liz sing/says SPOOKY SATURDAY",
+//  "Liz and Kelly play halloween music",
+//  "Kelly talks about her decorations",
+"one or both girls doesn't realize they are muted"
 ];
 
 
