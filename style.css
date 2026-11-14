@@ -728,6 +728,10 @@ h1, h2, h3, h4, h5, h6, th {
 .free-ways li {
     margin: 6px 0;
 }
+.free-ways a {
+    color: aqua;
+    text-decoration: underline;
+}
 
 .support-thanks {
     text-align: center;
@@ -739,3 +743,54 @@ h1, h2, h3, h4, h5, h6, th {
     font-size: 1.4rem;
     color: var(--accent);
 }
+
+/* Featured videos and content page */
+.featured-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 24px auto;
+}
+.featured-item {
+    max-width: 720px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.featured-item h2 {
+    margin-bottom: 4px;
+}
+
+.featured-item .caption {
+            margin: 0 0 16px;
+            opacity: 0.85;
+        }
+
+.video-wrap {
+            position: relative;
+            width: 100%;
+            max-width: 720px;
+            aspect-ratio: 16 / 9;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+.video-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+/* Instagram sizes its own embed; this just centers it */
+.reel-wrap {
+            display: flex;
+            justify-content: center;
+        }
+
+.reel-wrap .instagram-media {
+            max-width: 540px;
+            width: 100%;
+            min-width: 280px;
+        }
