@@ -794,3 +794,67 @@ h1, h2, h3, h4, h5, h6, th {
             width: 100%;
             min-width: 280px;
         }
+
+        .pedestal {
+  max-width: 380px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.pedestal-duo {
+  width: 70%;
+  display: block;
+  margin: 0 auto -12px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 3px 4px rgba(0,0,0,.25));
+  animation: pedestal-bounce 2.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes pedestal-bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+.pedestal-box {
+  position: relative;
+  z-index: 1;
+  background: #d9a86c;
+  border-radius: 6px 6px 12px 12px;
+  padding: 36px 20px 28px;
+  box-shadow: 0 10px 18px rgba(0,0,0,.2);
+}
+
+/* lid */
+.pedestal-box::before {
+  content: "";
+  position: absolute;
+  top: -14px; left: -8px; right: -8px;
+  height: 22px;
+  background: #c8924f;
+  border-radius: 6px;
+  box-shadow: 0 3px 4px rgba(0,0,0,.15);
+}
+
+/* tape */
+.pedestal-box::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 50%;
+  width: 46px; height: 100%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,.3);
+}
+
+.pedestal-box h1 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 2px 3px rgba(0,0,0,.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pedestal-duo { animation: none; }
+}
