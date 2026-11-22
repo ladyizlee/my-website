@@ -969,3 +969,140 @@ color:#4A2D5F}
   border-radius: 999px;
 }
 .spot-btn:hover { background: var(--alert); }
+
+
+/*support page */
+/* ===== Free / Paid gift boxes for support.html ===== */
+.support-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: calc(var(--size) * 4);
+  align-items: start;
+  max-width: 1000px;
+  margin: calc(var(--size) * 4) auto;
+  padding: 0 calc(var(--size) * 2);
+}
+
+.support-box {
+  position: relative;
+  background: #fff;
+  border: 4px solid var(--primary);
+  border-radius: 20px;
+  padding: calc(var(--size) * 4) calc(var(--size) * 2.5) calc(var(--size) * 2.5);
+  text-align: center;
+  box-shadow: 0 8px 0 var(--accent);
+}
+
+/* the "lid" label */
+.support-box__label {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 24px;
+  border-radius: 999px;
+  font-family: var(--button-font);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: .5px;
+  white-space: nowrap;
+  border: 4px solid var(--primary);
+  background: var(--highlight);
+  color: var(--secondary);
+}
+
+.support-box--free .support-box__label { background: var(--aqua); }
+
+.support-box--paid {
+  border-color: var(--alert);
+  background: linear-gradient(var(--highlight), #fff 40%);
+  box-shadow: 0 8px 0 var(--primary);
+}
+.support-box--paid .support-box__label {
+  background: var(--alert);
+  border-color: var(--secondary);
+  color: #fff;
+}
+
+.support-box__icon { font-size: 2.5rem; margin-bottom: 4px; }
+
+.support-box h3 {
+  font-family: var(--heading-font);
+  color: var(--secondary);
+  font-size: 1.8rem;
+  margin: 0 0 var(--size);
+}
+
+.support-box__intro {
+  font-family: var(--body-font);
+  color: var(--secondary);
+  margin: 0 0 calc(var(--size) * 1.5);
+}
+
+/* free list */
+.support-box__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  font-family: var(--body-font);
+  color: var(--secondary);
+}
+.support-box__list > li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+}
+.support-box__list > li::before {
+  content: "💜";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  font-size: .9rem;
+}
+.support-box__list ol {
+  margin: 8px 0 4px;
+  padding-left: 20px;
+  font-size: .95rem;
+}
+.support-box__list ol li { padding: 3px 0; }
+.support-box__list a { color: var(--alert); }
+
+/* paid section blocks */
+.support-box__block { margin-bottom: calc(var(--size) * 2.5); }
+.support-box__block h4 {
+  font-family: var(--button-font);
+  color: var(--secondary);
+  margin: 0 0 var(--size);
+}
+
+/* clickable Patreon tier images */
+.support-box__tiers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--size) * 1.5);
+}
+/* only stack on very small phones */
+@media (max-width: 380px) {
+  .support-box__tiers { grid-template-columns: 1fr; }
+}
+.support-box__tiers a {
+  display: block;
+  border: 3px solid var(--accent);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.support-box__tiers a:hover {
+  transform: scale(1.03);
+  border-color: var(--alert);
+}
+.support-box__tiers img { display: block; width: 100%; height: auto; }
+
+.support-box__qr {
+  display: block;
+  max-width: 160px;
+  height: auto;
+  margin: calc(var(--size) * 1.5) auto 0;
+  border-radius: 12px;
+}

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="box-buttons.css">
+    <link rel="stylesheet" href="support-boxes.css">
     <link rel="icon" type="image/png" href="LBTlogo.png">
 </head>
 
@@ -47,35 +48,75 @@
             community. [Also temporarily covering Jackson's vet bills while our boy adjusts to his entrance into The Golden Years.] 
         </p>
 
-        <div class="tip-jar">
-            <h3>Buy us a coffee ☕</h3>
-                <a class="box-button box-button--pink"
-                   href="https://www.buymeacoffee.com/LetsBoxThat"
-                   target="_blank" rel="noopener noreferrer">
-                    A SITE THAT ALLOWS YOU TO THROW SPARE CHANGE OUR WAY
-                    <span class="box-button__sub">EVEN TINY AMOUNTS HELP :)</span>
-                </a>
-        </div>
+        <div class="support-boxes">
 
-        <h3>Can't give? We get it. We really do. <br>You're still able to help without paying🫶</h3>
-        <ul class="free-ways">
-            <li>Like, comment, and subscribe on YouTube (this helps tremendously with the algorithm!)</li>
-            <li>View the playlist on youtube filled with <a href="https://youtube.com/playlist?list=PLEktye1h4EwI&si=5sGje5PeirIpC5zy" target="_blank" rel="noopener noreferrer">videos that Youtube allows us to monetize!</a> Due to copyright, only a select handful of our videos are allowed to generate profit. We organized them for you to make this easy! </li>
-            <li>Have Amazon Prime??? It COMES WITH one free Twitch <strong>PRIME SUBSCRIPTION</strong> that you can use for our twitch channel! You must renew that sub every month, so try not to forget!</li>
-            <ul class="free-ways">
-                <li>HOW-TO USE YOUR AMAZON PRIME TWITCH SUBSCRIPTION:</li>
-                <ol>
-                    <li>Make sure to <em>link your Amazon Prime account</em> to your Twitch account to activate the <strong>free</strong> subscription. <a href="https://help.twitch.tv/s/article/link-amazon-twitch-accounts" target="_blank" rel="noopener noreferrer">Here's some info on how to do that.</a></li>
-                    <li>Then visit <a href="https://www.twitch.tv/prime" target="_blank" rel="noopener noreferrer">https://www.twitch.tv/prime</a> to activate the subscription.</li>
-                    <li>Finally, go to <a href="https://www.twitch.tv/letsboxthat" target="_blank" rel="noopener noreferrer">OUR twitch channel</a>, and you should see a purple subscribe button. Choose the Use Prime Sub option, and you should be all set for that month!</li>
-                </ol>
-            </ul>
-            <li>Follow us on Twitch! Become a free member on Patreon!</li>
-            <li>Engage with our content on social media (Instagram, TikTok, X, etc.); follower counts holds a lot of power here and we'd love our numbers to grow!</li>
-            <li>Share an episode with a friend who needs a new fandom to obsess with</li>
-            <li>Show up to a livestream and play bingo with us - active chat on Twitch helps us a lot!</li>
-            <li>Just be part of the community. That's the best gift.</li>
-        </ul>
+            <!-- ===== FREE BOX ===== -->
+            <section class="support-box support-box--free">
+                <span class="support-box__label">FREE WAYS TO HELP</span>
+                <div class="support-box__icon">🎁</div>
+                <h3>Can't give? We get it.</h3>
+                <p class="support-box__intro">We really do. You're still able to help without paying🫶</p>
+
+                <ul class="support-box__list">
+                    <li>Like, comment, and subscribe on YouTube (this helps tremendously with the algorithm!)</li>
+                    <li>View the playlist on youtube filled with <a href="https://youtube.com/playlist?list=PLEktye1h4EwI&si=5sGje5PeirIpC5zy" target="_blank" rel="noopener noreferrer">videos that Youtube allows us to monetize!</a> Due to copyright, only a select handful of our videos are allowed to generate profit. We organized them for you to make this easy!</li>
+                    <li>Have Amazon Prime??? It COMES WITH one free Twitch <strong>PRIME SUBSCRIPTION</strong> that you can use for our twitch channel! You must renew that sub every month, so try not to forget!
+                        <br><strong>HOW-TO USE YOUR AMAZON PRIME TWITCH SUBSCRIPTION:</strong>
+                        <ol>
+                            <li>Make sure to <em>link your Amazon Prime account</em> to your Twitch account to activate the <strong>free</strong> subscription. <a href="https://help.twitch.tv/s/article/link-amazon-twitch-accounts" target="_blank" rel="noopener noreferrer">Here's some info on how to do that.</a></li>
+                            <li>Then visit <a href="https://www.twitch.tv/prime" target="_blank" rel="noopener noreferrer">https://www.twitch.tv/prime</a> to activate the subscription.</li>
+                            <li>Finally, go to <a href="https://www.twitch.tv/letsboxthat" target="_blank" rel="noopener noreferrer">OUR twitch channel</a>, and you should see a purple subscribe button. Choose the Use Prime Sub option, and you should be all set for that month!</li>
+                        </ol>
+                    </li>
+                    <li>Follow us on Twitch! Become a free member on Patreon!</li>
+                    <li>Engage with our content on social media (Instagram, TikTok, X, etc.); follower counts holds a lot of power here and we'd love our numbers to grow!</li>
+                    <li>Share an episode with a friend who needs a new fandom to obsess with</li>
+                    <li>Show up to a livestream and play bingo with us - active chat on Twitch helps us a lot!</li>
+                    <li>Just be part of the community. That's the best gift.</li>
+                </ul>
+            </section>
+
+            <!-- ===== PAID BOX ===== -->
+            <section class="support-box support-box--paid">
+                <span class="support-box__label">PAID</span>
+                <div class="support-box__icon">🎀</div>
+                <h3>Totally Optional Extras</h3>
+
+                <div class="support-box__block">
+                    <h4>Buy us a coffee ☕</h4>
+                    <a class="box-button box-button--pink"
+                       href="https://www.buymeacoffee.com/LetsBoxThat"
+                       target="_blank" rel="noopener noreferrer">
+                        A SITE THAT ALLOWS YOU TO THROW SPARE CHANGE OUR WAY
+                        <span class="box-button__sub">EVEN TINY AMOUNTS HELP :)</span>
+                    </a>
+                    </div>
+
+        <div class="support-box__block">
+                <h4>Join us on Patreon 💜</h4>
+                <div class="support-box__tiers">
+                <a href="https://www.patreon.com/LetsBoxThat" target="_blank" rel="noopener noreferrer">
+                        <img src="images/patreonTier1.png" alt="Patreon tier options, part 1">
+                </a>
+                <a href="https://www.patreon.com/LetsBoxThat" target="_blank" rel="noopener noreferrer">
+                        <img src="images/patreonTier2.png" alt="Patreon tier options, part 2">
+                </a>
+            <h4>Subscribe on Twitch 💜
+                (You can also gift subscriptions to others! THANK YOU to everyone who has done this for us!!!)
+            </h4>
+                <a href="https://www.twitch.tv/LetsBoxThat" target="_blank" rel="noopener noreferrer">
+                    <img src="images/twitchLogo.png" alt="Subscribe on Twitch">
+                </a>
+                <a href="https://www.instagram.com/LetsBoxThat" target="_blank" rel="noopener noreferrer">
+                    <img src="images/instaLogo.png" alt="Follow us on Instagram">
+                </a>
+                <h4>Follow us on Instagram💜(we need a higher follower count in order to have paid livestreaming and sponsorships)</h4>
+
+        </div>
+        </div>
+        </section>
+
+        </div>
 
         <p class="support-thanks">
             Thank you for being here at all. 💜<br>
@@ -92,12 +133,11 @@
         <a href="mailto:letsboxthattogether@gmail.com">ladyizlee</a>
         <a href="privacy.html">PRIVACY POLICY</a>
     </footer>
-    </div>
 </div>
 </body>
-
 <div class="tip-jar">
     <img class="tip-jar-img" src="images/tip-jar.png" alt="Scan to tip us">
 </div>
 
 </html>
+
