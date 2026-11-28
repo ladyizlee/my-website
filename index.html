@@ -51,6 +51,63 @@
 </div>
 
 
+<section class="vb" aria-labelledby="vb-title">
+
+  <div class="vb-lid">
+    <!-- Bow -->
+    <svg class="vb-bow" id="vb-bow" viewBox="0 0 120 80" aria-hidden="true">
+      <g stroke="#4A2D5F" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M60 52 C40 74 8 72 6 46 C4 22 34 18 60 46 Z" fill="#7BFFE9"/>
+        <path d="M60 52 C80 74 112 72 114 46 C116 22 86 18 60 46 Z" fill="#7BFFE9"/>
+        <path d="M60 50 L40 78 L52 74 L60 80 Z" fill="#7BFFE9"/>
+        <path d="M60 50 L80 78 L68 74 L60 80 Z" fill="#7BFFE9"/>
+        <circle cx="60" cy="46" r="11" fill="#AAAAFE"/>
+      </g>
+      <path d="M22 44 C26 36 34 34 40 38" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+      <path d="M98 44 C94 36 86 34 80 38" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+    </svg>
+
+    <h2 class="vb-title" id="vb-title">Hi! It's Liz. Hi, it's Kelly!</h2> <!-- change the title here -->
+  </div>
+
+  <div class="vb-body">
+    <div class="vb-frame">
+      <!-- Swap in your mp4 file name. Add poster="cover.jpg" for a custom cover image. -->
+      <video id="vb-video" controls playsinline preload="metadata">
+        <source src="twitchintro.mp4" type="video/mp4" alt="Twitch intro video">
+        Your browser can't play this video.
+      </video>
+
+      <button class="vb-cover" id="vb-cover" type="button" aria-label="Play video">
+        <span class="vb-cover-btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="#4A2D5F"/></svg>
+          Unbox it!
+        </span>
+      </button>
+    </div>
+
+    <p class="vb-caption">catch us live some time! twitch.tv/letsboxthat</p> <!-- change the caption here -->
+  </div>
+
+</section>
+
+<script>
+  (function () {
+    var video = document.getElementById('vb-video');
+    var cover = document.getElementById('vb-cover');
+    var bow = document.getElementById('vb-bow');
+
+    cover.addEventListener('click', function () {
+      bow.classList.remove('wiggle');
+      void bow.offsetWidth; // restart the wiggle
+      bow.classList.add('wiggle');
+      video.play();
+    });
+
+    video.addEventListener('play', function () { cover.classList.add('is-gone'); });
+    video.addEventListener('ended', function () { cover.classList.remove('is-gone'); });
+  })();
+</script>
 
     <div class="signoff">
         <img class="lysm" src="images/LYSMemote.png" alt="LYSM">
