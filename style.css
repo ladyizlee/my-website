@@ -1061,6 +1061,7 @@ nav ul li:hover ul li a:hover {
 /* each card looks like a little box */
 .spotlight-card {
     position: relative;
+    align-items: center;
     flex: 1 1 280px;
     max-width: 380px;
     padding: 2rem 1.25rem 1.25rem;
