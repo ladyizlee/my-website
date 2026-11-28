@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="box-buttons.css">
     <link rel="icon" type="image/png" href="images/LBTlogo.png">
+    <script>
+  (function () {
+    var p = location.pathname;
+    if (/\.html$/.test(p)) {
+      var clean = p.replace(/index\.html$/, '').replace(/\.html$/, '');
+      history.replaceState(null, '', (clean || '/') + location.search + location.hash);
+    }
+  })();
+</script>
 </head>
 
 
@@ -39,16 +48,18 @@
     <div id="Youtube">
         <h3>Current Obsessions: </h3>
         <div class="button-row">
-            <a class="box-button box-button--aqua" href="ep-index.html">
+            <a class="box-button box-button--card" id="box-button--aqua" href="ep-index.html">
                 BTS DEEP DIVE SERIES
-                <span class="box-button__sub">episode catalog (Aug. 2025-Present)</span>
+                <span class="box-button__sub"></span>
                 <img src="images/indexPreview.png" alt="image of BTS Deep Dive series content playlist">
+            episode catalog
             </a>
 
             <a class="box-button box-button--card" href="https://www.patreon.com/collection/1724048?view=expanded" target="_blank" target="_blank" rel="noopener noreferrer">
-                <img src="images/staytinyThumbnail.png" alt="image of staytiny content playlist">
                 STAYTINY STUFF
-                <span class="box-button__sub">Keeping up during comebacks! (or.. TRYING to keep up..)</span>
+                <img src="images/staytinyThumbnail.png" alt="image of staytiny content playlist">
+                
+                <span class="box-button__sub">Keeping up during comebacks!<br>(or.. TRYING to keep up..)</span>
             </a>
         </div>
 
@@ -67,9 +78,10 @@
             </a>
 
 
-            <a class="box-button box-button--card" href="https://youtube.com/playlist?list=PLX-BL4CVRopw&si=r5fvDPJ_Xc1gS2aP" target="_blank" rel="noopener noreferrer">
-                <img src="images/lyricPlaylist.png" alt="image of lyric lovers content playlist">
+            <a class="box-button box-button--card" id="box-button--aqua"href="https://youtube.com/playlist?list=PLX-BL4CVRopw&si=r5fvDPJ_Xc1gS2aP" target="_blank" rel="noopener noreferrer">
                 LYRIC LOVERS
+                <img src="images/lyricPlaylist.png" alt="image of lyric lovers content playlist">
+                
                 <span class="box-button__sub">YouTube playlist</span>
             </a>
         </div>
@@ -79,7 +91,7 @@
 
     <div id="Patreon">
         <h3>Patreon Exclusive Content</h3>
-            (NO PAYWALL! ALL CONTENT IS FREE FOR PATREON MEMBERS)<br>
+            (<strong>NO PAYWALL!</strong> ALL CONTENT IS FREE FOR PATREON MEMBERS)<br>
             Paid memberships are <strong>donations</strong> that go directly back into growing this community.
         <div class="button-row">
             <a class="box-button box-button--card" href="https://www.patreon.com/collection/2350892" target="_blank" rel="noopener noreferrer">
@@ -98,13 +110,13 @@
             <img class="displaying-screenshots" src="images/exploremore.png" alt="explore more content">
         </div>
     </div>
-<h3>We have MERCH now!</h3>
+<h3>📦We have MERCH now!📦</h3>
     <div class="button-row">
-        <a class="box-button box-button--pink"
+        <a class="box-button box-button--card" id="box-button--pink"
            href="https://www.redbubble.com/people/LetsBoxThat/shop"
            target="_blank" rel="noopener noreferrer">
-           <img class="box button" src="images/merchExamples.png" alt="image of merch examples">
-            📦Our Redbubble Shop!
+        <img src="images/merchExamples.png" alt="image of merch examples">
+            Our Redbubble Shop!
             <span class="box-button__sub"></span>
         </a>
         <div class="displaying-screenshots">
@@ -121,7 +133,7 @@
     <div id="socials">
         <h3>Socials</h3>
         <div class="button-row">
-            <a class="box-button box-button--aqua" href="https://www.instagram.com/letsboxthat" target="_blank" rel="noopener noreferrer">
+            <a class="box-button" id="box-button--aqua" href="https://www.instagram.com/letsboxthat" target="_blank" rel="noopener noreferrer">
                 <img class="lysm-sticker" src="images/lizandkelly.png" alt="liz and kelly holding lightsticks">
                 Instagram<br>@Letsboxthat
                 <span class="box-button__sub">story for updates;<br>concert footage</span>

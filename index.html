@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="box-buttons.css">
     <link rel="icon" type="image/png" href="images/LBTlogo.png">
+    <script>
+  (function () {
+    var p = location.pathname;
+    if (/\.html$/.test(p)) {
+      var clean = p.replace(/index\.html$/, '').replace(/\.html$/, '');
+      history.replaceState(null, '', (clean || '/') + location.search + location.hash);
+    }
+  })();
+</script>
 </head>
 
 
@@ -67,7 +76,7 @@
       <path d="M98 44 C94 36 86 34 80 38" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".8"/>
     </svg>
 
-    <h2 class="vb-title" id="vb-title">Hi! It's Liz. Hi, it's Kelly!</h2> <!-- change the title here -->
+    <h2 class="vb-title" id="vb-title">Hi! It's Liz. Hi, it's Kelly!</h2> 
   </div>
 
   <div class="vb-body">
@@ -86,7 +95,7 @@
       </button>
     </div>
 
-    <p class="vb-caption">catch us live some time! twitch.tv/letsboxthat</p> <!-- change the caption here -->
+    <p class="vb-caption">catch us live some time! twitch.tv/letsboxthat</p>
   </div>
 
 </section>

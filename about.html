@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="box-buttons.css">
     <link rel="icon" type="image/png" href="images/LBTlogo.png">
+    <script>
+  (function () {
+    var p = location.pathname;
+    if (/\.html$/.test(p)) {
+      var clean = p.replace(/index\.html$/, '').replace(/\.html$/, '');
+      history.replaceState(null, '', (clean || '/') + location.search + location.hash);
+    }
+  })();
+</script>
 </head>
 
 

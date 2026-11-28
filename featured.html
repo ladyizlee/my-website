@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="box-buttons.css">
     <link rel="icon" type="image/png" href="images/LBTlogo.png">
+    <script>
+  (function () {
+    var p = location.pathname;
+    if (/\.html$/.test(p)) {
+      var clean = p.replace(/index\.html$/, '').replace(/\.html$/, '');
+      history.replaceState(null, '', (clean || '/') + location.search + location.hash);
+    }
+  })();
+</script>
 </head>
 
 <body>
@@ -104,8 +113,59 @@
         </section> -->
 
         <!-- To add more, copy a whole <section class="featured-item"> block above -->
+
+
+<section class="featured-item">
+    <h2>HELP US REACH A MILESTONE!?</h2>
+            <div class="vb-frame">
+      <!-- Loads when the box is opened. No autoplay, so the view can count. -->
+      <iframe id="vb-video"
+              data-src="https://www.youtube-nocookie.com/embed/oemuj1sD9y4?rel=0"
+              title="BTS Deep Dive Episode 3: BTS Guides"
+              allow="encrypted-media; picture-in-picture; fullscreen"
+              allowfullscreen></iframe>
+
+
+      <button class="vb-cover" id="vb-cover" type="button" aria-label="Open the box"
+              style="background-image: linear-gradient(rgba(74,45,95,.45), rgba(74,45,95,.45)), url('https://img.youtube.com/vi/oemuj1sD9y4/hqdefault.jpg'); background-size: cover; background-position: center;">
+        <span class="vb-cover-btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z" fill="#4A2D5F"/></svg>
+          Open the box!
+        </span>
+      </button>
+    </div>
+
+
+    <p class="vb-hint" id="vb-hint" hidden>🎁 Box opened! Press ▶ to watch</p>
+
+
+<script>
+  (function () {
+    var frame = document.getElementById('vb-video');
+    var cover = document.getElementById('vb-cover');
+    var bow   = document.getElementById('vb-bow');
+    var hint  = document.getElementById('vb-hint');
+
+
+    cover.addEventListener('click', function () {
+      bow.classList.remove('wiggle');
+      void bow.offsetWidth;                 // restart the wiggle
+      bow.classList.add('wiggle');
+
+
+      frame.src = frame.getAttribute('data-src');   // load the player (no autoplay)
+      cover.classList.add('is-gone');
+      hint.hidden = false;
+      frame.focus();
+    });
+  })();
+</script>
+<p>The episode below is almost at <strong>100k views</strong> on YouTube! That'll be our FIRST video to reach 100k. Watch it now to help get it there!!!</p>
+
+</section>
 </main>
 </div>
+
 
 </div>
 <div class="signoff">
@@ -122,6 +182,5 @@
 	<a href="privacy.html">PRIVACY POLICY</a>
 </footer>
 </div>
-</body>
 </body>
 </html>

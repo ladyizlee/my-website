@@ -88,8 +88,8 @@
 }
 
 /* ---------- variants ---------- */
-.box-button--pink  { background: var(--box-pink); }
-.box-button--aqua  { background: var(--box-aqua); }
+#box-button--pink  { background: var(--box-pink); }
+#box-button--aqua  { background: var(--box-aqua); }
 
 .box-button--small {
   min-width: 0;

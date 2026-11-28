@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="box-buttons.css">
     <link rel="icon" type="image/png" href="images/LBTlogo.png">
+    <script>
+  (function () {
+    var p = location.pathname;
+    if (/\.html$/.test(p)) {
+      var clean = p.replace(/index\.html$/, '').replace(/\.html$/, '');
+      history.replaceState(null, '', (clean || '/') + location.search + location.hash);
+    }
+  })();
+</script>
 </head> 
 
 
@@ -34,6 +43,8 @@
     
 <div>
     <h1>Our Ongoing BTS Deep Dive</h1>
+    <p>When we decided to dive into the BTS rabbit hole, we wanted to do so <em>chronologically,</em> through their massive set of discography, MV's, live performances, dance practices, etc. 
+        With the exception of a few side quests here and there, this remains our method in our BTS Deep Dive Series. </p>
     <p>The spreadsheet below details <strong>our episodes for this series,</strong> and is updated regularly as we release more! 
         You can search to find a specific song or album.
     If you notice any errors or missing information, please let us know so we can correct it! Our email is linked at the bottom of each page on this site.</p>
