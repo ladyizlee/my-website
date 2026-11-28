@@ -154,12 +154,12 @@
     var bow   = document.getElementById('vb-bow');
     var hint  = document.getElementById('vb-hint');
 
-
     cover.addEventListener('click', function () {
-      bow.classList.remove('wiggle');
-      void bow.offsetWidth;                 // restart the wiggle
-      bow.classList.add('wiggle');
-
+      if (bow) {
+        bow.classList.remove('wiggle');
+        void bow.offsetWidth;            // restart the wiggle
+        bow.classList.add('wiggle');
+      }
 
       frame.src = frame.getAttribute('data-src');   // load the player (no autoplay)
       cover.classList.add('is-gone');
